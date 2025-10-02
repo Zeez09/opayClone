@@ -3,8 +3,8 @@ import React from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { FontAwesome6 } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -12,7 +12,8 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: "green",
+        tabBarInactiveTintColor: "gray",
         headerShown: false,
         tabBarButton: HapticTab,
       }}>
@@ -23,13 +24,41 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
+
+
       <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
+      name="rewards"
+      options={{
+        title: 'Rewards',
+        tabBarIcon: ({ color }) => <FontAwesome6 name="diamond" size={28} color={color} />,
+      }}
       />
+
+      <Tabs.Screen
+      name="finance"
+      options={{
+        title: 'Finance',
+        tabBarIcon: ({ color }) => <FontAwesome6 name="chart-line" size={28} color={color} />,
+      }}
+      />
+
+      <Tabs.Screen
+      name="cards"
+      options={{
+        title: 'Cards',
+        tabBarIcon: ({ color }) => <FontAwesome6 name="credit-card" size={28} color={color} />,
+      }}
+      />
+
+      <Tabs.Screen
+      name="me"
+      options={{
+        title: 'Me',
+        tabBarIcon: ({ color }) => <FontAwesome6 name="circle" size={28} color={color}  />,
+      }}
+      />
+
+
     </Tabs>
   );
 }
