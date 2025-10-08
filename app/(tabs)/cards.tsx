@@ -172,23 +172,13 @@ export default function Cards() {
 
             <View style={Styles.bottomCardTab1}>
               <View style={Styles.iconDiv}>
-                <FontAwesome6 name="earth-africa" color="#059c50ff" size={22} />
+                <FontAwesome6 name="sack-dollar" color="#059c50ff" size={22} />
               </View>
               <View style={Styles.iconDivTxt}>
-                <Text style={Styles.iconTxt}>Rep Your State Of Origin</Text>
-                <Text style={Styles.iconTxt3}>
-                  Get a virtual OPay card unique to your state {"\n"}of origin
+                <Text style={Styles.iconTxt}>Earn</Text>
+                <Text style={Styles.iconTxt2}>
+                  Flexible Spending with <Text style={Styles.iconTxt3}>15%</Text> annual interest
                 </Text>
-              </View>
-            </View>
-
-            <View style={Styles.bottomCardTab1}>
-              <View style={Styles.iconDiv}>
-                <FontAwesome6 name="globe" color="#059c50ff" size={22} />
-              </View>
-              <View style={Styles.iconDivTxt}>
-                <Text style={Styles.iconTxt}>Online Merchant Acceptance</Text>
-                <Text style={Styles.iconTxt2}>Accepted by <Text style={Styles.iconTxt3}>40,000+</Text> online merchants{"\n"}including JUMIA, KONGA, NETFLIX UBER{"\n"}Wallet Funding and others</Text>
               </View>
             </View>
 
@@ -207,6 +197,7 @@ export default function Cards() {
                   </View>
               </View>
             </View>
+
 
           </View>
         )}
