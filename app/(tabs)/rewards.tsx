@@ -1,4 +1,5 @@
 import { FontAwesome6 } from "@expo/vector-icons";
+import { router } from "expo-router";
 import { Smartphone, Tickets } from "lucide-react-native";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -37,7 +38,7 @@ export default function Rewards() {
         </View>
 
         
-        <TouchableOpacity style={styles.bottomBtn}>
+        <TouchableOpacity onPress={() => router.push("/login")} style={styles.bottomBtn}>
           <Text style={styles.bottomBtnText}>Login Now</Text>
         </TouchableOpacity>
       </View>

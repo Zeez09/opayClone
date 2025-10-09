@@ -1,4 +1,5 @@
 import { FontAwesome6 } from '@expo/vector-icons';
+import { router } from 'expo-router';
 import { Asterisk, Bell, CalendarCheck, ChevronRight, GraduationCap, Headset, Landmark, Megaphone, MoveDiagonal, ScanLine, ShieldCheck, Smartphone, SquareUser, TvMinimalPlay } from "lucide-react-native";
 import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -15,9 +16,13 @@ export default function Index() {
       <View style={styles.header}>
         <View style={styles.headerLeft}>
           <Text style={styles.headerTitle}>Hi</Text>
-          <TouchableOpacity style={styles.btn}>
-            <Text style={styles.btnText}>Login</Text>
-          </TouchableOpacity>
+
+<TouchableOpacity 
+  onPress={() => router.push("/login")} 
+  style={styles.btn}
+>
+  <Text style={styles.btnText}>Login</Text>
+</TouchableOpacity>
         </View>
         <View style={styles.headerRight}>
           <TouchableOpacity style={styles.actionItem}>
